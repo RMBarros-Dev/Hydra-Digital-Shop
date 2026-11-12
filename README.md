@@ -1,55 +1,79 @@
+<div align="center">
+
 # Hydra Digital Shop
 
-Guia rápido para rodar localmente o projeto Hydra Digital Shop (Backend .NET + Frontend React)
+**Loja digital de jogos com API .NET e interface React**
 
-Pré-requisitos
-- .NET 8/10 SDK (conforme alvo do projeto)
-- Visual Studio 2026 (recomendado) ou dotnet CLI
-- Node.js 20+ (para o frontend)
-- SQL Server LocalDB (instalado com Visual Studio) — usado por padrão
+[![.NET](https://img.shields.io/badge/.NET-10-512BD4?logo=dotnet&logoColor=white)](https://dotnet.microsoft.com/)
+[![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=black)](https://react.dev/)
+[![Vite](https://img.shields.io/badge/Vite-8-646CFF?logo=vite&logoColor=white)](https://vite.dev/)
 
-Passos rápidos (Visual Studio / Aspire)
+</div>
 
-1. Abrir a solução
-- Abra `Hydra Digital Shop.slnx` no Visual Studio Community 2026.
+## Visão geral
 
-2. Restaurar dependências
-- No Visual Studio: restaurar via Solution Restore.
-- Ou via linha de comando:
-  - dotnet restore
-  - cd frontend && npm install
+Projeto full-stack organizado em três partes: servidor ASP.NET Core, interface React/TypeScript e AppHost para orquestração com Aspire.
 
-3. Variáveis e ambiente
-- O Aspire AppHost injeta automaticamente a URL da API no ambiente do frontend durante a orquestração.
-- Se executar o frontend manualmente, o frontend tentará usar `import.meta.env.VITE_API_URL` ou `http://localhost:5000`.
-- O frontend contém `.npmrc` com `legacy-peer-deps=true` para evitar conflitos de peerDependencies durante o npm install.
+| Parte | Tecnologias | Diretório |
+| --- | --- | --- |
+| Servidor | C#, ASP.NET Core 10, Entity Framework Core | `Hydra Digital Shop.Server/` |
+| Interface | React 19, TypeScript, Vite | `frontend/` |
+| Orquestração | .NET Aspire | `Hydra Digital Shop.AppHost/` |
 
-4. Executar em Visual Studio (modo recomendado)
-- Defina o projeto `Hydra Digital Shop.AppHost` como Startup Project.
-- Pressione F5 (ou "Start Debugging"). O AppHost irá orquestrar o backend e o frontend (Vite) conforme configuração Aspire.
+O servidor usa SQL Server LocalDB por padrão. O projeto também documenta os endpoints `GET /api/games` e `POST /api/checkout`.
 
-5. Executar manualmente (alternativa)
-- Backend:
-  - cd "Hydra Digital Shop.Server"
-  - dotnet run
-  - A API estará disponível em: http://localhost:5000 (ou porta configurada)
-- Frontend (opcional):
-  - cd frontend
-  - npm run dev
+## Requisitos
 
-Endpoints úteis
-- GET /api/games — lista de jogos (persistidos via seed no LocalDB)
-- POST /api/checkout — processa o carrinho e gera chaves de ativação
+- .NET 10 SDK
+- Node.js `^20.19.0` ou `>=22.12.0`
+- SQL Server LocalDB para a configuração local padrão
+- Visual Studio com suporte a .NET Aspire, opcional
 
-Observações
-- O banco é criado automaticamente na primeira execução via EnsureCreated(). Para produção, use migrations EF Core.
-- O AppHost foi ajustado para usar cache em memória (DistributedMemoryCache) em vez de Redis/Docker.
-- Caso queira atualizar o Aspire CLI: execute `irm https://aspire.dev/install.ps1 | iex` no PowerShell, depois `aspire update --self`.
+## Executar com Aspire
 
-Suporte e próximos passos
-- Para melhorar a segurança e a robustez do projeto, recomenda-se:
-  - Revisar e corrigir vulnerabilidades npm (npm audit)
-  - Mover seeds para migrações se necessário
-  - Substituir imagens de placeholder por CDN otimizadas
+Na raiz do repositório, restaure as dependências e inicie o AppHost:
 
-Divirta-se com a Hydra Digital Shop! 🚀
+```bash
+dotnet restore "Hydra Digital Shop.slnx"
+dotnet run --project "Hydra Digital Shop.AppHost/Hydra Digital Shop.AppHost.csproj"
+```
+
+Também é possível abrir `Hydra Digital Shop.slnx` no Visual Studio e iniciar o projeto `Hydra Digital Shop.AppHost`. O Aspire coordena o servidor e o frontend.
+
+## Executar os projetos separadamente
+
+Servidor:
+
+```bash
+dotnet run --project "Hydra Digital Shop.Server/Hydra Digital Shop.Server.csproj"
+```
+
+Frontend:
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+Ao executar o frontend fora do Aspire, configure `VITE_API_URL` para apontar para a URL do servidor. O código usa `http://localhost:5000` como alternativa quando a variável não está definida.
+
+## Estrutura
+
+```text
+Hydra-Digital-Shop/
+├── Hydra Digital Shop.AppHost/
+├── Hydra Digital Shop.Server/
+├── frontend/
+└── Hydra Digital Shop.slnx
+```
+
+## Observações
+
+- O banco local é criado pelo servidor na primeira execução usando `EnsureCreated()`.
+- O AppHost inclui serviços de cache e recursos de desenvolvimento; consulte os arquivos do projeto para a configuração vigente.
+- Este README descreve a execução local. Antes de qualquer uso em produção, revise persistência, configuração e segurança.
+
+## Licença
+
+Consulte [LICENSE.txt](LICENSE.txt).
