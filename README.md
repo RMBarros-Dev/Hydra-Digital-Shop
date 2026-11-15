@@ -23,6 +23,20 @@
 
 ---
 
+## Índice
+
+- [Visão geral](#visão-geral)
+- [Área de aplicação](#área-de-aplicação)
+- [Funcionalidades](#funcionalidades-documentadas)
+- [Tecnologias e arquitetura](#arquitetura)
+- [Metodologia](#metodologia-de-desenvolvimento)
+- [Requisitos](#requisitos)
+- [Instalação e execução](#executar-localmente)
+- [Estrutura de arquivos](#estrutura-do-repositório)
+- [Configuração e segurança](#configuração-e-segurança)
+- [Documentação e princípios](#documentação-e-princípios-de-engenharia)
+- [Limitações e licença](#limitações-conhecidas)
+
 ## Visão geral
 
 Hydra Digital Shop é um projeto de estudo full-stack para explorar a integração entre uma API construída com ASP.NET Core e uma interface web em React e TypeScript. A solução também utiliza .NET Aspire para coordenar os componentes durante o desenvolvimento local.
@@ -35,6 +49,10 @@ O repositório está dividido em três áreas principais:
 | Interface | Aplicação React, páginas e componentes de interface | `frontend/` |
 | Orquestração | Inicialização coordenada dos recursos de desenvolvimento | `Hydra Digital Shop.AppHost/` |
 
+## Área de aplicação
+
+O projeto explora o domínio de uma loja digital de jogos, com uma interface de navegação e uma API para consulta de catálogo e operação de checkout demonstrativa. O objetivo técnico é praticar integração entre frontend, backend, persistência relacional e orquestração de serviços.
+
 ## Funcionalidades documentadas
 
 - Consulta de jogos por meio de `GET /api/games`.
@@ -45,6 +63,10 @@ O repositório está dividido em três áreas principais:
 - Execução integrada pelo AppHost do .NET Aspire.
 
 > Este README descreve os recursos encontrados no repositório. Não pressupõe integração com meios de pagamento ou processamento financeiro real.
+
+## Metodologia de desenvolvimento
+
+A solução está organizada por componentes independentes, com frontend e servidor executáveis separadamente ou coordenados pelo AppHost. A evolução deve ocorrer por mudanças pequenas e verificáveis: implementar a funcionalidade, validar contratos HTTP, revisar persistência e executar build/lint do frontend e build/testes do backend conforme a configuração disponível.
 
 ## Arquitetura
 
@@ -150,6 +172,14 @@ Hydra-Digital-Shop/
 ## Identidade visual
 
 A marca, o banner e a paleta deste projeto estão em [assets/brand](assets/brand/). As regras de aplicação estão em [docs/brand/README.md](docs/brand/README.md).
+
+## Documentação e princípios de engenharia
+
+- [Identidade visual](docs/brand/README.md) — paleta e regras de aplicação.
+- [Banner](assets/brand/banner.svg) e [logotipo](assets/brand/logo.svg) — ativos vetoriais.
+- [CHANGELOG](CHANGELOG.md) — histórico de alterações disponível no repositório.
+
+Princípios aplicáveis: separação de responsabilidades, configuração por ambiente, contratos de API claros, validação de dados, proteção de credenciais e revisão de dependências. A existência desses princípios nesta documentação não significa que todos os controles estejam implementados ou auditados.
 
 ## Licença
 
