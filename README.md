@@ -169,14 +169,11 @@ Hydra-Digital-Shop/
 - O endpoint de checkout documentado não deve ser interpretado como integração real com um gateway de pagamento.
 - O ambiente descrito no README é voltado ao desenvolvimento; a prontidão para produção exige validação adicional.
 
-## Identidade visual
-
-A marca, o banner e a paleta deste projeto estão em [assets/brand](assets/brand/). As regras de aplicação estão em [docs/brand/README.md](docs/brand/README.md).
-
 ## Documentação e princípios de engenharia
 
 - [Identidade visual](docs/brand/README.md) — paleta e regras de aplicação.
 - [Banner](assets/brand/banner.svg) e [logotipo](assets/brand/logo.svg) — ativos vetoriais.
+- [Organização de arquivos](docs/project-structure.md) — responsabilidade dos principais diretórios.
 - [CHANGELOG](CHANGELOG.md) — histórico de alterações disponível no repositório.
 
 Princípios aplicáveis: separação de responsabilidades, configuração por ambiente, contratos de API claros, validação de dados, proteção de credenciais e revisão de dependências. A existência desses princípios nesta documentação não significa que todos os controles estejam implementados ou auditados.
