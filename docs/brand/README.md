@@ -1,21 +1,25 @@
-# Identidade visual — Hydra Digital Shop
+# Diretrizes de identidade visual — Hydra Digital Shop
 
 ## Conceito
 
-E-commerce de jogos digitais com API ASP.NET Core, frontend React e orquestração com .NET Aspire.
+Identidade dark luxury para uma loja digital de jogos, cartões-presente e assinaturas, com emblema inspirado em um dragão e linguagem premium.
 
-## Paleta oficial
+## Paleta aplicada
 
-| Token | Cor | Uso |
+| Token | HEX | Aplicação |
 | --- | --- | --- |
-| Base | `#10102B` | Fundo e superfícies escuras |
-| Primária | `#7C3AED` | Elementos de marca e gráficos |
-| Destaque | `#22D3EE` | Ênfase, links e chamadas |
+| Preto profundo | `#0A0712` | Fundo principal |
+| Violeta escuro | `#160D22` | Superfícies e profundidade |
+| Dourado | `#D7B45A` | Moldura, símbolo e acentos premium |
+| Violeta | `#8B45D6` | Energia, contraste e destaques |
+| Marfim | `#F7F0E6` | Texto claro |
 
-## Ativos
+## Ativos oficiais
 
-- `logo.svg`: símbolo principal.
-- `banner.svg`: banner horizontal para README e apresentações.
-- `project-mark.svg`: ativo legado preservado para compatibilidade.
+- `assets/brand/logo.svg`: emblema vetorial com dragão estilizado.
+- `assets/brand/banner.svg`: banner horizontal editorial para README e apresentações.
+- `assets/brand/project-mark.svg`: marca anterior preservada para compatibilidade.
 
-Use os arquivos vetoriais sem alterar proporções ou cores. Mantenha contraste suficiente e área de respiro.
+## Aplicação
+
+Preservar proporções, contraste e área de respiro. Utilizar os SVGs locais do repositório e não alterar individualmente as cores dos ativos.
