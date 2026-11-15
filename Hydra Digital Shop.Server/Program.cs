@@ -86,6 +86,9 @@ public class Program
             if (req.Items == null || req.Items.Count == 0)
                 return Results.BadRequest(new { error = "No items provided" });
 
+            if (req.Items.Any(item => item.Quantity <= 0))
+                return Results.BadRequest(new { error = "Item quantities must be greater than zero" });
+
             var ids = req.Items.Select(i => i.GameId).ToList();
             var games = await db.Games.Where(g => ids.Contains(g.Id)).ToListAsync();
 
@@ -97,8 +100,7 @@ public class Program
                 var g = games.FirstOrDefault(x => x.Id == item.GameId);
                 if (g == null) continue;
 
-                var unitPrice = g.Price * (1 - (g.Discount ?? 0) / 100m);
-                total += unitPrice * item.Quantity;
+                total += CheckoutPricing.CalculateLineTotal(g.Price, g.Discount, item.Quantity);
 
                 for (int q = 0; q < item.Quantity; q++)
                 {
