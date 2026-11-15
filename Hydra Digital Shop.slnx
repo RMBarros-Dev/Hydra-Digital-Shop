@@ -5,4 +5,5 @@
   </Project>
   <Project Path="Hydra Digital Shop.AppHost/Hydra Digital Shop.AppHost.csproj" />
   <Project Path="Hydra Digital Shop.Server/Hydra Digital Shop.Server.csproj" />
+  <Project Path="Hydra Digital Shop.Server.Tests/Hydra Digital Shop.Server.Tests.csproj" />
 </Solution>
