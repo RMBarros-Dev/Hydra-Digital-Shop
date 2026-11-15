@@ -1,5 +1,10 @@
 <div align="center">
 
+<p align="center">
+  <img src="assets/brand/project-mark.svg" alt="HYDRA — identidade visual do projeto" width="100%" />
+</p>
+
+
 # Hydra Digital Shop
 
 **Loja digital de jogos com API .NET e interface React**
