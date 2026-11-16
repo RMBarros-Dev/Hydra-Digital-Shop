@@ -23,7 +23,8 @@
 
 
 <p align="center">
-  [![CI](https://github.com/RMBarros-Dev/Hydra-Digital-Shop/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/RMBarros-Dev/Hydra-Digital-Shop/actions/workflows/ci.yml) [![CodeQL](https://github.com/RMBarros-Dev/Hydra-Digital-Shop/actions/workflows/codeql.yml/badge.svg?branch=main)](https://github.com/RMBarros-Dev/Hydra-Digital-Shop/actions/workflows/codeql.yml)
+  <a href="https://github.com/RMBarros-Dev/Hydra-Digital-Shop/actions/workflows/ci.yml"><img src="https://github.com/RMBarros-Dev/Hydra-Digital-Shop/actions/workflows/ci.yml/badge.svg?branch=main" alt="CI status" /></a>
+  <a href="https://github.com/RMBarros-Dev/Hydra-Digital-Shop/actions/workflows/codeql.yml"><img src="https://github.com/RMBarros-Dev/Hydra-Digital-Shop/actions/workflows/codeql.yml/badge.svg?branch=main" alt="CodeQL status" /></a>
 </p>
 
 ---
@@ -67,7 +68,7 @@ O projeto explora o domínio de uma loja digital de jogos, com uma interface de 
 - Estado de carrinho organizado em contexto React.
 - Execução integrada pelo AppHost do .NET Aspire.
 
-> Este README descreve os recursos encontrados no repositório. Não pressupõe integração com meios de pagamento ou processamento financeiro real.
+> Este README descreve os recursos encontrados no repositório. Não pressupõe integração com meios de pagamento ou processamento financeiro real. O checkout demonstrativo rejeita IDs de catálogo ausentes e aplica arredondamento monetário para duas casas decimais; autenticação, idempotência, pagamento real e fluxo de estoque continuam fora do escopo atual.
 
 ## Metodologia de desenvolvimento
 
