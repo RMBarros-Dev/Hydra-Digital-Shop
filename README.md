@@ -21,6 +21,11 @@
   <a href="https://learn.microsoft.com/dotnet/aspire/"><img src="https://img.shields.io/badge/.NET_Aspire-Orchestration-512BD4?logo=dotnet&logoColor=white" alt=".NET Aspire"/></a>
 </p>
 
+
+<p align="center">
+  [![CI](https://github.com/RMBarros-Dev/Hydra-Digital-Shop/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/RMBarros-Dev/Hydra-Digital-Shop/actions/workflows/ci.yml) [![CodeQL](https://github.com/RMBarros-Dev/Hydra-Digital-Shop/actions/workflows/codeql.yml/badge.svg?branch=main)](https://github.com/RMBarros-Dev/Hydra-Digital-Shop/actions/workflows/codeql.yml)
+</p>
+
 ---
 
 ## Índice
