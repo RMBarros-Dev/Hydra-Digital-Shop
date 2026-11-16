@@ -1,112 +1,95 @@
-# Hydra Digital Shop
+<p align="right"><strong>Idioma:</strong> <a href="README.md">Português (Brasil)</a> · <a href="README.en.md">English</a></p>
 
+<p align="center"><img src="assets/brand/banner.svg" alt="Hydra Digital Shop — banner" width="100%" /></p>
+<p align="center"><img src="assets/brand/logo.svg" alt="Logotipo Hydra" width="76" /></p>
+<h1 align="center">Hydra Digital Shop</h1>
+<p align="center"><strong>Loja digital demonstrativa com API ASP.NET Core, React e .NET Aspire.</strong></p>
 <p align="center">
-  <img src="assets/brand/banner.svg" alt="Hydra Digital Shop — Digital storefront" width="100%" />
+  <img src="https://img.shields.io/badge/.NET-10-512BD4?logo=dotnet&logoColor=white" alt=".NET 10" />
+  <img src="https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=black" alt="React 19" />
+  <img src="https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white" alt="TypeScript" />
+  <img src="https://img.shields.io/badge/Vite-8-646CFF?logo=vite&logoColor=white" alt="Vite" />
+  <a href="https://github.com/RMBarros-Dev/Hydra-Digital-Shop/actions/workflows/ci.yml"><img src="https://github.com/RMBarros-Dev/Hydra-Digital-Shop/actions/workflows/ci.yml/badge.svg?branch=main" alt="Status da CI" /></a>
+  <a href="https://github.com/RMBarros-Dev/Hydra-Digital-Shop/actions/workflows/codeql.yml"><img src="https://github.com/RMBarros-Dev/Hydra-Digital-Shop/actions/workflows/codeql.yml/badge.svg?branch=main" alt="Status do CodeQL" /></a>
 </p>
-
-<p align="center">
-  <img src="assets/brand/logo.svg" alt="Hydra logo" width="76" />
-</p>
-
-<p align="center">
-  <strong>Loja digital de jogos com API .NET e interface React.</strong><br/>
-  Uma aplicação full-stack organizada em serviços de backend, frontend e orquestração local.
-</p>
-
-<p align="center">
-  <a href="https://dotnet.microsoft.com/"><img src="https://img.shields.io/badge/.NET-10-512BD4?logo=dotnet&logoColor=white" alt=".NET 10"/></a>
-  <a href="https://react.dev/"><img src="https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=black" alt="React 19"/></a>
-  <a href="https://www.typescriptlang.org/"><img src="https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white" alt="TypeScript"/></a>
-  <a href="https://vite.dev/"><img src="https://img.shields.io/badge/Vite-8-646CFF?logo=vite&logoColor=white" alt="Vite"/></a>
-  <a href="https://learn.microsoft.com/dotnet/aspire/"><img src="https://img.shields.io/badge/.NET_Aspire-Orchestration-512BD4?logo=dotnet&logoColor=white" alt=".NET Aspire"/></a>
-</p>
-
-
-<p align="center">
-  <a href="https://github.com/RMBarros-Dev/Hydra-Digital-Shop/actions/workflows/ci.yml"><img src="https://github.com/RMBarros-Dev/Hydra-Digital-Shop/actions/workflows/ci.yml/badge.svg?branch=main" alt="CI status" /></a>
-  <a href="https://github.com/RMBarros-Dev/Hydra-Digital-Shop/actions/workflows/codeql.yml"><img src="https://github.com/RMBarros-Dev/Hydra-Digital-Shop/actions/workflows/codeql.yml/badge.svg?branch=main" alt="CodeQL status" /></a>
-</p>
-
----
 
 ## Índice
 
-- [Visão geral](#visão-geral)
-- [Área de aplicação](#área-de-aplicação)
-- [Funcionalidades](#funcionalidades-documentadas)
-- [Tecnologias e arquitetura](#arquitetura)
-- [Metodologia](#metodologia-de-desenvolvimento)
-- [Requisitos](#requisitos)
-- [Instalação e execução](#executar-localmente)
-- [Estrutura de arquivos](#estrutura-do-repositório)
-- [Configuração e segurança](#configuração-e-segurança)
-- [Documentação e princípios](#documentação-e-princípios-de-engenharia)
-- [Limitações e licença](#limitações-conhecidas)
+- [01 · Visão geral](#01--visão-geral)
+- [02 · Contexto e objetivo](#02--contexto-e-objetivo)
+- [03 · Escopo funcional](#03--escopo-funcional)
+- [04 · Funcionalidades documentadas](#04--funcionalidades-documentadas)
+- [05 · Arquitetura](#05--arquitetura)
+- [06 · Tecnologias por camada](#06--tecnologias-por-camada)
+- [07 · Requisitos](#07--requisitos)
+- [08 · Inicialização integrada com Aspire](#08--inicialização-integrada-com-aspire)
+- [09 · Execução do backend](#09--execução-do-backend)
+- [10 · Execução do frontend](#10--execução-do-frontend)
+- [11 · Estrutura do repositório](#11--estrutura-do-repositório)
+- [12 · Configuração e variáveis](#12--configuração-e-variáveis)
+- [13 · Persistência de dados](#13--persistência-de-dados)
+- [14 · Segurança](#14--segurança)
+- [15 · Testes e qualidade](#15--testes-e-qualidade)
+- [16 · Limitações conhecidas](#16--limitações-conhecidas)
+- [17 · Metodologia e documentação](#17--metodologia-e-documentação)
+- [18 · Licença](#18--licença)
 
-## Visão geral
+## 01 · Visão geral
 
-Hydra Digital Shop é um projeto de estudo full-stack para explorar a integração entre uma API construída com ASP.NET Core e uma interface web em React e TypeScript. A solução também utiliza .NET Aspire para coordenar os componentes durante o desenvolvimento local.
+Hydra Digital Shop é um projeto de estudo Full Stack que explora a integração entre uma API ASP.NET Core e uma interface Web em React e TypeScript. O .NET Aspire coordena os componentes durante o desenvolvimento local.
 
-O repositório está dividido em três áreas principais:
+## 02 · Contexto e objetivo
 
-| Componente | Responsabilidade | Diretório |
-| --- | --- | --- |
-| API / servidor | Endpoints HTTP, lógica de servidor e acesso a dados | `Hydra Digital Shop.Server/` |
-| Interface | Aplicação React, páginas e componentes de interface | `frontend/` |
-| Orquestração | Inicialização coordenada dos recursos de desenvolvimento | `Hydra Digital Shop.AppHost/` |
+O projeto modela uma loja digital de jogos para praticar integração frontend/backend, organização de serviços, persistência relacional e orquestração local. É um projeto educacional, não uma plataforma comercial de pagamentos.
 
-## Área de aplicação
+## 03 · Escopo funcional
 
-O projeto explora o domínio de uma loja digital de jogos, com uma interface de navegação e uma API para consulta de catálogo e operação de checkout demonstrativa. O objetivo técnico é praticar integração entre frontend, backend, persistência relacional e orquestração de serviços.
+O repositório documenta um catálogo de jogos, páginas de vitrine, detalhes dos jogos, visualização de biblioteca, interações de carrinho e um endpoint de checkout demonstrativo. O comportamento efetivo deve ser conferido no código-fonte atual.
 
-## Funcionalidades documentadas
+## 04 · Funcionalidades documentadas
 
-- Consulta de jogos por meio de `GET /api/games`.
-- Endpoint de checkout documentado como `POST /api/checkout`.
+- Consulta do catálogo por `GET /api/games`.
+- Endpoint demonstrativo de checkout por `POST /api/checkout`.
 - Interface de loja com páginas de vitrine, biblioteca e detalhes.
-- Componentes de cartões de jogos e drawer de carrinho.
-- Estado de carrinho organizado em contexto React.
-- Execução integrada pelo AppHost do .NET Aspire.
+- Componentes de cartões de jogos e painel lateral do carrinho.
+- Estado do carrinho organizado por contexto React.
+- Inicialização coordenada pelo AppHost do .NET Aspire.
 
-> Este README descreve os recursos encontrados no repositório. Não pressupõe integração com meios de pagamento ou processamento financeiro real. O checkout demonstrativo rejeita IDs de catálogo ausentes e aplica arredondamento monetário para duas casas decimais; autenticação, idempotência, pagamento real e fluxo de estoque continuam fora do escopo atual.
+O checkout rejeita identificadores ausentes no catálogo e arredonda valores monetários para duas casas decimais. Não integra um provedor de pagamento nem movimenta dinheiro real.
 
-## Metodologia de desenvolvimento
-
-A solução está organizada por componentes independentes, com frontend e servidor executáveis separadamente ou coordenados pelo AppHost. A evolução deve ocorrer por mudanças pequenas e verificáveis: implementar a funcionalidade, validar contratos HTTP, revisar persistência e executar build/lint do frontend e build/testes do backend conforme a configuração disponível.
-
-## Arquitetura
+## 05 · Arquitetura
 
 ```mermaid
 flowchart LR
-    Browser[Browser] --> Frontend[React 19 / TypeScript]
-    Frontend --> API[ASP.NET Core API]
-    API --> EF[Entity Framework Core]
-    EF --> DB[(SQL Server LocalDB)]
-    AppHost[.NET Aspire AppHost] -. coordinates .-> Frontend
-    AppHost -. coordinates .-> API
+  Browser[Navegador] --> React[React 19 / TypeScript]
+  React --> API[ASP.NET Core API]
+  API --> EF[Entity Framework Core]
+  EF --> DB[(SQL Server LocalDB)]
+  Host[.NET Aspire AppHost] -. coordena .-> React
+  Host -. coordena .-> API
 ```
 
-### Tecnologias por camada
+Frontend e backend podem ser iniciados separadamente ou coordenados pelo AppHost, conforme o fluxo de desenvolvimento.
+
+## 06 · Tecnologias por camada
 
 | Camada | Tecnologias |
-| --- | --- |
+|---|---|
 | Backend | C#, .NET 10, ASP.NET Core |
 | Persistência | Entity Framework Core, SQL Server LocalDB |
 | Frontend | React 19, TypeScript, Vite |
 | Estilização | Tailwind CSS |
 | Orquestração local | .NET Aspire |
 
-## Requisitos
+## 07 · Requisitos
 
-- .NET 10 SDK.
+- SDK do .NET 10.
 - Node.js `^20.19.0` ou `>=22.12.0`.
 - npm.
 - SQL Server LocalDB para a configuração local padrão.
 - Visual Studio com suporte a .NET Aspire é opcional.
 
-## Executar localmente
-
-### Opção 1 — inicialização integrada com Aspire
+## 08 · Inicialização integrada com Aspire
 
 Na raiz do repositório:
 
@@ -115,15 +98,17 @@ dotnet restore "Hydra Digital Shop.slnx"
 dotnet run --project "Hydra Digital Shop.AppHost/Hydra Digital Shop.AppHost.csproj"
 ```
 
-O AppHost coordena os componentes configurados para desenvolvimento.
+Consulte os logs do AppHost para identificar os endereços locais atribuídos aos componentes.
 
-### Opção 2 — iniciar o backend separadamente
+## 09 · Execução do backend
 
 ```bash
 dotnet run --project "Hydra Digital Shop.Server/Hydra Digital Shop.Server.csproj"
 ```
 
-### Opção 3 — iniciar o frontend separadamente
+O servidor disponibiliza as rotas de API documentadas. Confirme o endereço de escuta na saída da aplicação.
+
+## 10 · Execução do frontend
 
 ```bash
 cd frontend
@@ -131,9 +116,9 @@ npm install
 npm run dev
 ```
 
-Ao executar o frontend fora do Aspire, configure `VITE_API_URL` para apontar para a URL do servidor. O código utiliza `http://localhost:5000` como fallback quando a variável não está definida.
+Ao executar fora do Aspire, configure `VITE_API_URL` com a URL base da API. O frontend utiliza `http://localhost:5000` como fallback quando a variável não está definida.
 
-## Estrutura do repositório
+## 11 · Estrutura do repositório
 
 ```text
 Hydra-Digital-Shop/
@@ -145,45 +130,51 @@ Hydra-Digital-Shop/
 │   ├── Program.cs
 │   └── Hydra Digital Shop.Server.csproj
 ├── frontend/
-│   ├── src/
-│   │   ├── components/
-│   │   ├── context/
-│   │   ├── data/
-│   │   └── pages/
+│   ├── src/components/
+│   ├── src/context/
+│   ├── src/data/
+│   ├── src/pages/
 │   ├── package.json
 │   └── vite.config.ts
-├── assets/
-│   └── brand/
-│       ├── banner.svg
-│       ├── logo.svg
-│       └── project-mark.svg
+├── assets/brand/
 ├── CHANGELOG.md
 └── Hydra Digital Shop.slnx
 ```
 
-## Configuração e segurança
+## 12 · Configuração e variáveis
 
-- Utilize variáveis de ambiente para configurações específicas de cada ambiente.
-- Não versione senhas, tokens ou strings de conexão privadas.
-- O servidor utiliza SQL Server LocalDB por padrão.
-- A criação inicial do banco está documentada por meio de `EnsureCreated()`; avalie migrações e estratégia de persistência antes de qualquer uso produtivo.
-- Revise CORS, autenticação, autorização, validação de entrada e segurança do checkout antes de expor a aplicação publicamente.
+Utilize variáveis de ambiente para configurações específicas de cada ambiente. Não versione senhas, tokens ou strings de conexão privadas. O servidor utiliza SQL Server LocalDB como configuração padrão de desenvolvimento.
 
-## Limitações conhecidas
+## 13 · Persistência de dados
 
-- A configuração padrão de persistência é local, com SQL Server LocalDB.
-- O endpoint de checkout documentado não deve ser interpretado como integração real com um gateway de pagamento.
-- O ambiente descrito no README é voltado ao desenvolvimento; a prontidão para produção exige validação adicional.
+A criação inicial do banco está documentada por meio de `EnsureCreated()`. Antes de qualquer uso produtivo, avalie migrações, evolução de schema, persistência durável, backup e recuperação. A configuração local não demonstra uma estratégia de dados pronta para produção.
 
-## Documentação e princípios de engenharia
+## 14 · Segurança
 
-- [Identidade visual](docs/brand/README.md) — paleta e regras de aplicação.
-- [Banner](assets/brand/banner.svg) e [logotipo](assets/brand/logo.svg) — ativos vetoriais.
-- [Organização de arquivos](docs/project-structure.md) — responsabilidade dos principais diretórios.
-- [CHANGELOG](CHANGELOG.md) — histórico de alterações disponível no repositório.
+Antes de expor a aplicação publicamente, revise CORS, autenticação, autorização, validação de entrada, gestão de sessão e segurança do checkout. A configuração de desenvolvimento não deve ser tratada como baseline de segurança de produção.
 
-Princípios aplicáveis: separação de responsabilidades, configuração por ambiente, contratos de API claros, validação de dados, proteção de credenciais e revisão de dependências. A existência desses princípios nesta documentação não significa que todos os controles estejam implementados ou auditados.
+## 15 · Testes e qualidade
 
-## Licença
+Utilize os workflows de CI e CodeQL como verificações automatizadas. Execute build/testes do backend e instalação, lint e build do frontend conforme os scripts disponíveis no repositório. Um workflow aprovado comprova apenas as verificações efetivamente executadas.
 
-Consulte [LICENSE.txt](LICENSE.txt).
+## 16 · Limitações conhecidas
+
+- A persistência padrão documentada é SQL Server LocalDB local.
+- O endpoint de checkout é demonstrativo e não integra um gateway de pagamento.
+- Autenticação, autorização, idempotência, pagamento real e fluxos de estoque de produção permanecem fora do escopo documentado.
+- A prontidão para produção exige validação adicional de arquitetura, segurança, operação e persistência.
+
+## 17 · Metodologia e documentação
+
+A solução separa frontend, servidor e orquestração. Prefira alterações pequenas e revisáveis; valide contratos HTTP, revise o comportamento de persistência e execute as verificações adequadas de backend e frontend.
+
+- [Identidade visual](docs/brand/README.md).
+- [Banner](assets/brand/banner.svg) e [logotipo](assets/brand/logo.svg).
+- [Estrutura do projeto](docs/project-structure.md).
+- [Changelog](CHANGELOG.md).
+
+Princípios relevantes: separação de responsabilidades, configuração por ambiente, contratos de API claros, validação de dados, proteção de credenciais e revisão de dependências.
+
+## 18 · Licença
+
+Consulte [LICENSE.txt](LICENSE.txt) para a licença e os termos aplicáveis.
