@@ -40,6 +40,9 @@ jobs:
       - name: Build .NET solution
         run: dotnet build "Hydra Digital Shop.slnx" --configuration Release --no-restore
 
+      - name: Run .NET tests
+        run: dotnet test "Hydra Digital Shop.slnx" --configuration Release --no-build
+
       - name: Install frontend dependencies
         working-directory: frontend
         run: npm ci
