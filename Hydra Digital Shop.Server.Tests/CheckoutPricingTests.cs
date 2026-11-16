@@ -9,11 +9,17 @@ public class CheckoutPricingTests
     [InlineData(100, null, 100)]
     [InlineData(100, 0, 100)]
     [InlineData(100, 25, 75)]
-    [InlineData(199.99, 50, 99.995)]
+    [InlineData(199.99, 50, 100.00)]
     [InlineData(80, 100, 0)]
     public void CalculateUnitPrice_AppliesDiscount(decimal price, int? discount, decimal expected)
     {
         Assert.Equal(expected, CheckoutPricing.CalculateUnitPrice(price, discount));
+    }
+
+    [Fact]
+    public void CalculateUnitPrice_RoundsMidpointAwayFromZero()
+    {
+        Assert.Equal(100.00m, CheckoutPricing.CalculateUnitPrice(199.99m, 50));
     }
 
     [Fact]
