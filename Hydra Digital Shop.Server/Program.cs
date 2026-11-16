@@ -89,16 +89,21 @@ public class Program
             if (req.Items.Any(item => item.Quantity <= 0))
                 return Results.BadRequest(new { error = "Item quantities must be greater than zero" });
 
-            var ids = req.Items.Select(i => i.GameId).ToList();
-            var games = await db.Games.Where(g => ids.Contains(g.Id)).ToListAsync();
+            if (req.Items.Any(item => item.GameId == Guid.Empty))
+                return Results.BadRequest(new { error = "Every item must include a valid game ID" });
+
+            var ids = req.Items.Select(i => i.GameId).Distinct().ToList();
+            var games = await db.Games.Where(g => ids.Contains(g.Id)).ToDictionaryAsync(g => g.Id);
+
+            if (games.Count != ids.Count)
+                return Results.BadRequest(new { error = "One or more games do not exist in the catalog" });
 
             var purchased = new List<object>();
             decimal total = 0m;
 
             foreach (var item in req.Items)
             {
-                var g = games.FirstOrDefault(x => x.Id == item.GameId);
-                if (g == null) continue;
+                var g = games[item.GameId];
 
                 total += CheckoutPricing.CalculateLineTotal(g.Price, g.Discount, item.Quantity);
 
