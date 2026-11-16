@@ -1,5 +1,20 @@
 # Changelog
 
+## [Unreleased]
+
+### Added
+- CI para build da solução .NET e lint/build do frontend.
+- Testes xUnit para os cálculos de preço, descontos e quantidades de checkout.
+- Dependabot, CodeQL, política de segurança e documentos de contribuição e governança.
+- Documentação de arquitetura e registro retrospectivo das decisões atuais.
+
+### Changed
+- Extraí a lógica de preços de checkout para uma classe testável.
+- Rejeito quantidades menores ou iguais a zero no endpoint de checkout.
+
+---
+
+
 Versão: local-development
 Data: (work in progress)
 
