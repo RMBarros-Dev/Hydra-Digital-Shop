@@ -1,3 +1,5 @@
+<p align="right"><strong>Idioma:</strong> <a href="README.md">Português (Brasil)</a> · <a href="README.en.md">English</a></p>
+
 # Hydra Digital Shop
 
 <p align="center">
