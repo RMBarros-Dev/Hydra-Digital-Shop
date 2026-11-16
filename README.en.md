@@ -13,6 +13,27 @@
   <a href="https://github.com/RMBarros-Dev/Hydra-Digital-Shop/actions/workflows/codeql.yml"><img src="https://github.com/RMBarros-Dev/Hydra-Digital-Shop/actions/workflows/codeql.yml/badge.svg?branch=main" alt="CodeQL status" /></a>
 </p>
 
+## Contents
+
+- [01 · Overview](#01--overview)
+- [02 · Context and Purpose](#02--contextandprpose)
+- [03 · Functional Scope](#03--nctionalscope)
+- [04 · Features and API Surface](#04--eatresandapisrace)
+- [05 · Architecture](#05--architectre)
+- [06 · Technology Stack](#06--technologystack)
+- [07 · Requirements](#07--reqirements)
+- [08 · Integrated Startup with Aspire](#08--integratedstartpwithaspire)
+- [09 · Start the Backend Separately](#09--startthebackendseparately)
+- [10 · Start the Frontend Separately](#10--starttherontendseparately)
+- [11 · Repository Structure](#11--repositorystrctre)
+- [12 · Configuration and Data](#12--conigrationanddata)
+- [13 · Security](#13--secrity)
+- [14 · Quality and Validation](#14--qalityandvalidation)
+- [15 · Known Limitations](#15--knownlimitations)
+- [16 · Development Methodology](#16--developmentmethodology)
+- [17 · Documentation and Engineering Principles](#17--docmentationandengineeringprinciples)
+- [18 · License and Attribution](#18--licenseandattribtion)
+
 ## 01 · Overview
 
 Hydra Digital Shop is a Full-Stack learning project exploring integration between an ASP.NET Core API and a React/TypeScript Web interface. .NET Aspire coordinates local development components.
