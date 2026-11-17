@@ -1,9 +1,9 @@
 <p align="right"><strong>Language:</strong> <a href="README.md">Português (Brasil)</a> · <a href="README.en.md">English</a></p>
 
-<p align="center"><img src="assets/brand/banner.svg" alt="Hydra Digital Shop banner" width="100%" /></p>
-<p align="center"><img src="assets/brand/logo.svg" alt="Hydra logo" width="76" /></p>
+<p align="center"><img src="assets/brand/banner.svg" alt="Hydra Digital Shop — graphite and orange editorial identity" width="100%" /></p>
+<p align="center"><img src="assets/brand/logo.svg" alt="Hydra Digital Shop H monogram" width="76" /></p>
 <h1 align="center">Hydra Digital Shop</h1>
-<p align="center"><strong>Full-Stack digital storefront study using ASP.NET Core, React and .NET Aspire.</strong></p>
+<p align="center"><strong>Full-Stack digital storefront study using ASP.NET Core, React and .NET Aspire.<br>Digital experience. Full-Stack architecture.</strong></p>
 <p align="center">
   <img src="https://img.shields.io/badge/.NET-10-512BD4?logo=dotnet&logoColor=white" alt=".NET 10" />
   <img src="https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=black" alt="React 19" />
