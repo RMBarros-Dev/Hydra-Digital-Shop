@@ -45,7 +45,7 @@ O projeto modela uma loja digital de jogos para praticar integração frontend/b
 
 ## 02 · Demonstração real e referências visuais
 
-O README atual não identifica uma URL pública nem uma captura real da execução. Use a demonstração local ou as referências visuais indicadas nesta seção.
+A documentação atual não identifica uma URL pública de demonstração. A demonstração reproduzível utiliza o ambiente local integrado pelo .NET Aspire ou a execução separada do backend e do frontend descrita no guia.
 
 ## 03 · Funcionalidades e estado de implementação
 
