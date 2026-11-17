@@ -1,1 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-labelledby="title desc"><title id="title">Hydra Digital Shop — símbolo H</title><desc id="desc">Monograma geométrico H, com travessa em laranja queimado sobre grafite.</desc><rect width="512" height="512" rx="82" fill="#F5F0E7"/><path d="M54 54H458V458H54Z" fill="none" stroke="#C4BDB1" stroke-width="2"/><g transform="translate(52 56)"><g fill="none" stroke-linejoin="miter"><path d="M106 92V326M302 92V326" stroke="#18191C" stroke-width="33" stroke-linecap="square"/><path d="M123 211H285" stroke="#E87543" stroke-width="33" stroke-linecap="square"/></g><path d="M306 90L334 62M305 326L335 356" stroke="#E87543" stroke-width="10" stroke-linecap="square"/></g><path d="M64 445H156" stroke="#E87543" stroke-width="5"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+<title id="title">Hydra Digital Shop — monograma H em fundo claro</title><desc id="desc">Monograma H geométrico com dois losangos laranja sobre fundo marfim.</desc>
+<rect width="512" height="512" rx="88" fill="#F5F0E6"/><rect x="12" y="12" width="488" height="488" rx="78" fill="none" stroke="#D8D1C5" stroke-width="2"/>
+<path d="M128 98V414M384 98V414M128 256H384" fill="none" stroke="#191C20" stroke-width="40" stroke-linecap="square"/>
+<path d="M256 98L314 155L256 212L198 155Z M256 300L314 357L256 414L198 357Z" fill="#E86F38"/>
+</svg>
