@@ -1,9 +1,9 @@
 <p align="right"><strong>Idioma:</strong> <a href="README.md">Português (Brasil)</a> · <a href="README.en.md">English</a></p>
 
-<p align="center"><img src="assets/brand/banner.svg" alt="Hydra Digital Shop — banner" width="100%" /></p>
-<p align="center"><img src="assets/brand/logo.svg" alt="Logotipo Hydra" width="76" /></p>
+<p align="center"><img src="assets/brand/banner.svg" alt="Hydra Digital Shop — identidade editorial grafite e laranja" width="100%" /></p>
+<p align="center"><img src="assets/brand/logo.svg" alt="Monograma H da Hydra Digital Shop" width="76" /></p>
 <h1 align="center">Hydra Digital Shop</h1>
-<p align="center"><strong>Loja digital demonstrativa com API ASP.NET Core, React e .NET Aspire.</strong></p>
+<p align="center"><strong>Loja digital demonstrativa com API ASP.NET Core, React e .NET Aspire.<br>Experiência digital. Arquitetura Full Stack.</strong></p>
 <p align="center">
   <img src="https://img.shields.io/badge/.NET-10-512BD4?logo=dotnet&logoColor=white" alt=".NET 10" />
   <img src="https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=black" alt="React 19" />
