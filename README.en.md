@@ -45,7 +45,7 @@ The project models a digital game storefront to practice frontend/backend integr
 
 ## 02 · Live demonstration and visual references
 
-The current README does not identify a public demo URL or runtime screenshot. Use the local demonstration or the visual references identified in this section.
+The current documentation does not identify a public demo URL. The reproducible demonstration uses the local .NET Aspire environment or the separate backend and frontend commands in the user guide.
 
 ## 03 · Features and implementation status
 
