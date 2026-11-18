@@ -178,3 +178,31 @@ Princípios relevantes: separação de responsabilidades, configuração por amb
 ## 18 · Licença
 
 Consulte [LICENSE.txt](LICENSE.txt) para a licença e os termos aplicáveis.
+
+
+## Métricas de Engenharia
+
+<div align="center">
+  <img src="https://img.shields.io/github/stars/RMBarros-Dev/Hydra-Digital-Shop?style=flat-square&label=stars" alt="Estrelas no GitHub" />
+  <img src="https://img.shields.io/github/forks/RMBarros-Dev/Hydra-Digital-Shop?style=flat-square&label=forks" alt="Forks no GitHub" />
+  <img src="https://img.shields.io/github/issues/RMBarros-Dev/Hydra-Digital-Shop?style=flat-square&label=issues%20abertas" alt="Issues abertas" />
+  <img src="https://img.shields.io/badge/.NET-10-512BD4?style=flat-square&logo=dotnet&logoColor=white" alt=".NET 10" />
+  <img src="https://img.shields.io/badge/React-19-61DAFB?style=flat-square&logo=react&logoColor=111111" alt="React 19" />
+</div>
+
+<!-- REPOSITORY_METRICS_START -->
+_As métricas de linguagens serão geradas pelo GitHub Actions após a primeira execução bem-sucedida._
+<!-- REPOSITORY_METRICS_END -->
+
+### Verificação técnica
+
+| Dimensão | Evidência implementada | Limite da medição |
+|---|---|---|
+| Backend | C#, .NET 10, ASP.NET Core | Implementação da API documentada no repositório. |
+| Frontend | React 19, TypeScript, Vite 8, Tailwind CSS | Aplicação frontend separada. |
+| Acesso a dados | Entity Framework Core e SQL Server LocalDB | Persistência para desenvolvimento local; não é arquitetura de banco de produção. |
+| Orquestração | .NET Aspire AppHost | Coordenação local de componentes, não comprovação de implantação cloud. |
+| API | GET /api/games e POST /api/checkout demonstrativo | Checkout não se conecta a provedor de pagamentos. |
+| CI | [Workflow de CI](.github/workflows/ci.yml) | Resultado atual indicado pelo badge acima. |
+| Análise estática de segurança | [Workflow CodeQL](.github/workflows/codeql.yml) | Execução do workflow não equivale a certificação de segurança. |
+| Cobertura de testes automatizados | A documentação atual não informa percentual de cobertura | Não inferido a partir do status de CI. |
