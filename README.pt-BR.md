@@ -191,7 +191,20 @@ Consulte [LICENSE.txt](LICENSE.txt) para a licença e os termos aplicáveis.
 </div>
 
 <!-- REPOSITORY_METRICS_START -->
-_As métricas de linguagens serão geradas pelo GitHub Actions após a primeira execução bem-sucedida._
+### Distribuição de linguagens (GitHub Linguist)
+
+![Distribuição de linguagens do repositório](assets/metrics/repository-languages.svg)
+
+| Linguagem | Bytes de código | Participação |
+|---|---:|---:|
+| TypeScript | 27,548 | 42.42% |
+| C# | 18,824 | 28.99% |
+| CSS | 17,040 | 26.24% |
+| JavaScript | 1,161 | 1.79% |
+| HTML | 365 | 0.56% |
+
+_Total de bytes de código contabilizados: 64,938. Atualizado em: 2026-11-18 21:12 UTC._
+
 <!-- REPOSITORY_METRICS_END -->
 
 ### Verificação técnica
